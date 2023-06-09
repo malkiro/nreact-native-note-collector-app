@@ -48,7 +48,6 @@ export default function SignUp({ navigation }) {
                     style={styles.input}
                     placeholder="Enter your name"
                     autoCapitalize="none"
-                    // textContentType="emailAddress"
                     name="employeename"
                     mode="outlined"
                     label="Enter your name"
@@ -62,7 +61,6 @@ export default function SignUp({ navigation }) {
                     autoCapitalize="none"
                     keyboardType="email-address"
                     textContentType="emailAddress"
-                    // autoFocus={true}
                     name="email"
                     mode="outlined"
                     label="Enter email"
@@ -101,7 +99,6 @@ export default function SignUp({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         backgroundColor: "#A5D1EE",
         height: '100%',
     },
@@ -114,8 +111,6 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     input: {
-        // backgroundColor: "#F6F7FB",
-        // height: 58,
         marginBottom: 20,
         fontSize: 16,
         borderRadius: 10,
@@ -139,7 +134,6 @@ const styles = StyleSheet.create({
         marginTop: -10
     },
     form: {
-        // flex: 1,
         justifyContent: 'center',
         marginHorizontal: 30,
     },

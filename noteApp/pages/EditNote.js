@@ -23,14 +23,6 @@ export default function EditNote({ route, navigation }) {
     const { title, description } = noteData;
     const [imgSrc, setImgSrc] = useState('');
 
-
-    // useEffect(() => {
-    //     console.log(noteData)
-    //     if (noteData.file_path) {
-    //         setSelectedImage(`${imageUrl}/${noteData.file_path}`);
-    //     }
-    // }, [noteData.file_path, imageUrl]);
-
     useEffect(() => {
         fetchNoteData();
     }, []);
@@ -97,19 +89,6 @@ export default function EditNote({ route, navigation }) {
                     name: selectedImage[0].fileName
                 })
             }
-            // if (selectedImage) {
-            //     const imageUriParts = selectedImage.split('/');
-            //     const imageName = imageUriParts[imageUriParts.length - 1];
-            // formData.append('image', {
-            //     uri: selectedImage,
-            //     type: 'image/jpeg', // Update with the correct image type
-            //     name: imageName,
-            // });
-            // }
-
-            // const response = await axios.put(`noteapi/note/${noteId}`, formData, {
-            //     headers: { 'Content-Type': 'multipart/form-data' },
-            // });
 
             const response = await axios({
                 method: "put",
@@ -119,7 +98,6 @@ export default function EditNote({ route, navigation }) {
             })
             console.log("test3");
             Alert.alert('Note Updated Successfully');
-            //   navigation.navigate('ViewNote', { noteId: response.data.id })
             navigation.navigate('Home');
         } catch (error) {
             console.error(error);
@@ -154,22 +132,9 @@ export default function EditNote({ route, navigation }) {
                         placeholder="Enter content..."
                         multiline={true}
                         value={noteData.description}
-                        // onChangeText={(text) => setNoteData({ ...noteData, description: text })}
                         onChangeText={handleDescriptionChange}
                     />
                     <Pressable style={styles.imageWapper}>
-                        {/* {selectedImage &&
-                            selectedImage.length != 0 ? (
-                            <View style={styles.imageContainer}>
-                                <Image
-                                    source={{ uri: selectedImage[0].uri }}
-                                    style={styles.image}
-                                />
-                            </View>
-                        ) : (
-                            <PlaceholderImage />
-                        )}  */}
-
                         {selectedImage && selectedImage.length !== 0 ? (
                             <View style={styles.imageContainer}>
                                 <Image
@@ -262,7 +227,6 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderRadius: 20,
         borderColor: '#A0D7F6',
-        // padding: 15,
         height: '90%',
     },
     gradient: {
@@ -275,7 +239,6 @@ const styles = StyleSheet.create({
     imageContainer: {
         borderWidth: 2,
         borderColor: 'black',
-        // padding: 5,
         borderRadius: 5,
         width: '100%',
         height: '58%',

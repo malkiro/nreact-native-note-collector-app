@@ -41,7 +41,6 @@ export default function Login({ navigation }) {
           autoCapitalize="none"
           keyboardType="email-address"
           textContentType="emailAddress"
-          // autoFocus={true}
           mode="outlined"
           label="Enter email"
           activeOutlineColor="#A0D7F6"
@@ -77,7 +76,6 @@ export default function Login({ navigation }) {
 }
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
     backgroundColor: "#A0D7F6",
     height: '100%',
   },
@@ -90,8 +88,6 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   input: {
-    // backgroundColor: "#F6F7FB",
-    // height: 58,
     marginBottom: 20,
     fontSize: 16,
     borderRadius: 10,
@@ -115,7 +111,6 @@ const styles = StyleSheet.create({
     marginTop: -10
   },
   form: {
-    // flex: 1,
     justifyContent: 'center',
     marginHorizontal: 30,
   },

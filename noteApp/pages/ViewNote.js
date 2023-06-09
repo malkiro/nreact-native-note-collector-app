@@ -30,7 +30,7 @@ export default function ViewNote({ route, navigation }) {
   };
 
   if (!noteDataArray.length) {
-    return null; // You can render a loading indicator or placeholder while data is being fetched
+    return null; 
   }
 
   return (

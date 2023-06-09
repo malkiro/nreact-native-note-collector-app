@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Button, Image, SafeAreaView, TouchableOpacity, StatusBar, Alert, Dimensions, Pressable, BackHandler } from "react-native";
-const halfWindowsWidth = Dimensions.get('window').width / 2;
+import React from "react";
+import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity, StatusBar, Alert, Dimensions, Pressable, BackHandler } from "react-native";
 
 const logoutImage = require("../assets/logout-page.jpg");
 
 export default function LogOut({ navigation }) {
     const handleLogout = () => {
-        BackHandler.exitApp(); // This will close the app
+        BackHandler.exitApp(); 
     };
 
     return (
@@ -33,7 +32,6 @@ export default function LogOut({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         backgroundColor: "#A2DFF1",
         height: '100%',
     },
@@ -62,7 +60,6 @@ const styles = StyleSheet.create({
         marginTop: -10
     },
     form: {
-        // flex: 1,
         justifyContent: 'center',
         marginHorizontal: 30,
     },

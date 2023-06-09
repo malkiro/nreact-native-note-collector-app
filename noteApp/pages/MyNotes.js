@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { View, TextInput, TouchableOpacity, Image, StyleSheet, Alert } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
 import { Card, Text } from 'react-native-paper';
 const deleteIcon = require("../assets/delete-icon.png");
@@ -9,7 +8,6 @@ import LinearGradient from 'react-native-linear-gradient';
 import { FlatList } from 'react-native-gesture-handler';
 
 export default function MyNotes({ navigation }) {
-    // const navigation = useNavigation();
     const [notes, setNotes] = useState([]);
     const [searchText, setSearchText] = useState("");
 
