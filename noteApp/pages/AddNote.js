@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { View, StyleSheet, TextInput, TouchableOpacity, Text, Pressable, Image, Alert } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
-import axios from 'axios';
+import axios from 'axios'; 
+ 
 
 export default function AddNote() {
     const [note, setNote] = useState({
